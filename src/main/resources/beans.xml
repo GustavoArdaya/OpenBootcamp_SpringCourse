@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+https://www.springframework.org/schema/context/spring-context.xsd" >
 
-    <bean id="imprimirSaludo" class="com.springCourse.SpringCourse.Saludo">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
+    <context:component-scan base-package="com.springCourse.SpringCourse"/>
 
-    <!-- more bean definitions go here -->
+
+<!--    <bean id="imprimirSaludo" class="com.springCourse.SpringCourse.Saludo">-->
+<!--        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    <bean id="notificationService" class="com.springCourse.SpringCourse.NotificationService">-->
+
+<!--    </bean>-->
+<!--    &lt;!&ndash; //el scope prototype hace que se cree una clase cada vez que se la llama, a diferencia de singleton &ndash;&gt;-->
+<!--    <bean id="userService" class="com.springCourse.SpringCourse.UserService" scope="singleton">-->
+<!--        <constructor-arg name="notificationService" ref="notificationService"/>-->
+<!--        <constructor-arg name="name" value="Servicio de Usuario"/>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash; more bean definitions go here &ndash;&gt;-->
 
 </beans>
